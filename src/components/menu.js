@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 import Row from 'react-bootstrap/lib/Row';
 import Col from 'react-bootstrap/lib/Col';
@@ -40,13 +40,28 @@ const Calls = styled.div`
 const CallButton = styled.button`
 	width: 176px;
 	height: 48px;
-	background-color: #3fc7db;
+	background: #3fc7db;
+	background: -moz-linear-gradient(left, #3fc7db 0%, #35a1b1 100%);
+	background: -webkit-linear-gradient(left, #3fc7db 0%,#35a1b1 100%);
+	background: linear-gradient(to right, #3fc7db 0%,#35a1b1 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3fc7db', endColorstr='#35a1b1',GradientType=1 );
 	border-radius: 30px;
 	color: #fff;
 	font-size: 14px;
 	font-weight: 400;
 	line-height: 22.04px;
 	border: none;
+	border-bottom: 4px solid #35a1b1;
+	-webkit-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+
+	&:hover {
+		border-bottom: 0px solid #35a1b1;
+		-webkit-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+	}
 `
 
 class Adress extends React.Component {
